@@ -1,0 +1,62 @@
+package PckDeltaWsSap;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclimg,
+  xmlrtl,
+  dsnap,
+  Pck_Sys_accept,
+  dbrtl,
+  dac170,
+  unidac170,
+  dxCoreRS17,
+  cxLibraryRS17,
+  dxGDIPlusRS17,
+  dxThemeRS17,
+  cxPageControlRS17,
+  cxDataRS17,
+  cxEditorsRS17,
+  cxTreeListRS17,
+  dxNavBarRS17,
+  soaprtl;
+
+contains
+  UInterfaceGestaoPluginWsDelta in 'UInterfaceGestaoPluginWsDelta.pas',
+  UFrmImportWSDelta in 'UFrmImportWSDelta.pas' {FrmImportWSDelta},
+  UAux_Integracao in 'UAux_Integracao.pas',
+  UBD_Aux in 'UBD_Aux.pas',
+  UThreads_WS in 'UThreads_WS.pas',
+  z_ws_ac_mat1 in 'z_ws_ac_mat1.pas',
+  z_ws_ac_mat11 in 'z_ws_ac_mat11.pas',
+  z_ws_cent_pal1 in 'z_ws_cent_pal1.pas',
+  USysLogs_local in 'USysLogs_local.pas';
+
+end.

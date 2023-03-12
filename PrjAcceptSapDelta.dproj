@@ -1,0 +1,167 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BE82D8EE-A980-4518-B618-FA78AB455430}</ProjectGuid>
+        <ProjectVersion>14.4</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>PrjAcceptSapDelta.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_UsePackage>cxPivotGridChartRS17;users_v20;dxSkinOffice2013WhiteRS17;dxSkinSevenRS17;dxSkinBlueprintRS17;dxSkinHighContrastRS17;dxSkinOffice2007BlackRS17;dxCoreRS17;dac170;PckMyUniquery;dxSkinXmas2008BlueRS17;rbADO1417;dxSkinMetropolisRS17;dxSkinSummer2008RS17;dxSkinBlueRS17;dxSkinDarkRoomRS17;dxPScxSchedulerLnkRS17;DBXInterBaseDriver;DataSnapServer;DataSnapCommon;dxPScxTLLnkRS17;dxRibbonRS17;DbxCommonDriver;cxDataRS17;vclimg;dxSkinsdxBarPainterRS17;dxPSdxDBTVLnkRS17;dbxcds;DatasnapConnectorsFreePascal;dxSkinMoneyTwinsRS17;vcldb;cxExportRS17;dxPSCoreRS17;dxBarExtItemsRS17;dxGDIPlusRS17;dxNavBarRS17;CustomIPTransport;cxLibraryRS17;cxGridRS17;dxSkinOffice2010BlackRS17;dsnap;IndyIPServer;unidac170;IndyCore;dxSkinMcSkinRS17;CloudService;dxPScxCommonRS17;dxSkiniMaginaryRS17;frxDB17;dxSkinsdxDLPainterRS17;dxWizardControlRS17;dxPScxVGridLnkRS17;unidacfmx170;rbDBE1417;dxSkinSevenClassicRS17;dxPScxExtCommonRS17;StatCore417;FMXTee917;rbUSER1417;TeeGL917;dxPScxSSLnkRS17;dxSkinLilianRS17;fs17;dxSkinOffice2010BlueRS17;dxPSdxLCLnkRS17;bindcompfmx;dxSkinOffice2010SilverRS17;vcldbx;dxSkinOffice2013LightGrayRS17;cxSchedulerGridRS17;dbrtl;bindcomp;inetdb;dxBarRS17;DBXOdbcDriver;dxBarDBNavRS17;dxSkinWhiteprintRS17;xmlrtl;dxSkinsdxRibbonPainterRS17;ibxpress;rbIDE1417;rbDB1417;MtxDb417;dxDockingRS17;PckImageBoxDXE3;vclactnband;bindengine;soaprtl;dxADOServerModeRS17;bindcompvcl;dxBarExtDBItemsRS17;dxSkinOffice2007PinkRS17;dxSkinOffice2013DarkGrayRS17;vclie;dxPSPrVwRibbonRS17;rbDIDE1417;StatTools417;cxPageControlRS17;dxSkinscxPCPainterRS17;dxSpreadSheetRS17;cxSchedulerRibbonStyleEventEditorRS17;dxmdsRS17;dxSkinTheAsphaltWorldRS17;DBXInformixDriver;Intraweb;cxSchedulerTreeBrowserRS17;dxPsPrVwAdvRS17;dxSkinSilverRS17;dxdborRS17;DelphiModbusXE3;dsnapcon;DBXFirebirdDriver;inet;fsDB17;vclx;dxSkinStardustRS17;cxEditorsRS17;DBXSybaseASADriver;crcontrols170;dxGaugeControlRS17;dbexpress;EurekaLogCore;IndyIPClient;dxSkinVS2010RS17;cxTreeListdxBarPopupMenuRS17;rbRCL1417;dxThemeRS17;DBXSqliteDriver;dxPScxGridLnkRS17;fmx;IndySystem;dxSkinValentineRS17;MtxCore417;vclib;inetdbbde;DataSnapClient;dxSkinDevExpressStyleRS17;dxPSdxSpreadSheetLnkRS17;DataSnapProviderClient;DBXSybaseASEDriver;cxBarEditItemRS17;dxServerModeRS17;cxPivotGridOLAPRS17;cxSchedulerRS17;MetropolisUILiveTile;dxSkinPumpkinRS17;dxPSLnksRS17;dxPSdxDBOCLnkRS17;cxVerticalGridRS17;TeeUI917;dxSkinSpringTimeRS17;vcldsnap;dacvcl170;dxSkinDevExpressDarkStyleRS17;DBXDb2Driver;MtxTools417;rbCIDE1417;DBXOracleDriver;dxSkinLiquidSkyRS17;vclribbon;TeeDB917;cxSpreadSheetRS17;fmxase;vcl;TeeLanguage917;dxSkinOffice2007SilverRS17;IndyIPCommon;DBXMSSQLDriver;dxPSdxOCLnkRS17;dxSkinMetropolisDarkRS17;TeeWorld917;inetdbxpress;webdsnap;FMXTeePro917;tc_custom_driver;rbBDE1417;dxSkinCoffeeRS17;adortl;dxSkinscxSchedulerPainterRS17;TeeTree2D17Tee9;FMXTeeDB917;dclRBDBE1417;frx17;dxtrmdRS17;dxPScxPCProdRS17;rtl;DbxClientDriver;rbDBDE1417;dxTabbedMDIRS17;dxSkinSharpPlusRS17;dxComnRS17;dxSkinsCoreRS17;dxSkinLondonLiquidSkyRS17;dxdbtrRS17;TeePro917;CPortLibDXE;dxSkinBlackRS17;dxorgcRS17;svnui;IndyProtocols;DBXMySQLDriver;dxLayoutControlRS17;bindcompdbx;dxSkinOffice2007BlueRS17;FmxTeeUI917;dxPScxPivotGridLnkRS17;dxSpellCheckerRS17;vcltouch;dxSkinOffice2007GreenRS17;dxSkinSharpRS17;websnap;dclRBBDE1417;dxSkinFoggyRS17;dxTileControlRS17;rbDAD1417;VclSmp;dxSkinDarkSideRS17;tc_dbexpress_driver;cxPivotGridRS17;DataSnapConnectors;dacfmx170;fmxobj;cxTreeListRS17;dxSkinGlassOceansRS17;dxPSdxFCLnkRS17;wupdpkgdXE3;rbUSERDesign1417;unidacvcl170;frxe17;dclRBADO1417;svn;dxFlowChartRS17;fmxdae;TeeImage917;dxMapControlRS17;bdertl;dxSkinsdxNavBarPainterRS17;Tee917;FMXTeeLanguage917;TSVNWizardProj;dxDBXServerModeRS17;DataSnapIndy10ServerTransport;dxSkinCaramelRS17;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>cxPivotGridChartRS17;dxSkinOffice2013WhiteRS17;dxSkinSevenRS17;dxSkinBlueprintRS17;dxSkinHighContrastRS17;dxSkinOffice2007BlackRS17;dxCoreRS17;dxSkinXmas2008BlueRS17;dxSkinMetropolisRS17;dxSkinSummer2008RS17;dxSkinBlueRS17;dxSkinDarkRoomRS17;dxPScxSchedulerLnkRS17;DBXInterBaseDriver;DataSnapServer;DataSnapCommon;dxPScxTLLnkRS17;dxRibbonRS17;DbxCommonDriver;cxDataRS17;vclimg;dxSkinsdxBarPainterRS17;dxPSdxDBTVLnkRS17;dbxcds;DatasnapConnectorsFreePascal;dxSkinMoneyTwinsRS17;vcldb;cxExportRS17;dxPSCoreRS17;dxBarExtItemsRS17;dxGDIPlusRS17;dxNavBarRS17;CustomIPTransport;cxLibraryRS17;cxGridRS17;dxSkinOffice2010BlackRS17;dsnap;IndyIPServer;IndyCore;dxSkinMcSkinRS17;dxPScxCommonRS17;dxSkiniMaginaryRS17;dxSkinsdxDLPainterRS17;dxWizardControlRS17;dxPScxVGridLnkRS17;dxSkinSevenClassicRS17;dxPScxExtCommonRS17;StatCore417;dxPScxSSLnkRS17;dxSkinLilianRS17;dxSkinOffice2010BlueRS17;dxPSdxLCLnkRS17;bindcompfmx;dxSkinOffice2010SilverRS17;dxSkinOffice2013LightGrayRS17;cxSchedulerGridRS17;dbrtl;bindcomp;inetdb;dxBarRS17;DBXOdbcDriver;dxBarDBNavRS17;dxSkinWhiteprintRS17;xmlrtl;dxSkinsdxRibbonPainterRS17;ibxpress;dxDockingRS17;vclactnband;bindengine;soaprtl;dxADOServerModeRS17;bindcompvcl;dxBarExtDBItemsRS17;dxSkinOffice2007PinkRS17;dxSkinOffice2013DarkGrayRS17;vclie;dxPSPrVwRibbonRS17;StatTools417;cxPageControlRS17;dxSkinscxPCPainterRS17;dxSpreadSheetRS17;cxSchedulerRibbonStyleEventEditorRS17;dxmdsRS17;dxSkinTheAsphaltWorldRS17;DBXInformixDriver;cxSchedulerTreeBrowserRS17;dxPsPrVwAdvRS17;dxSkinSilverRS17;dxdborRS17;dsnapcon;DBXFirebirdDriver;inet;vclx;dxSkinStardustRS17;cxEditorsRS17;DBXSybaseASADriver;dxGaugeControlRS17;dbexpress;IndyIPClient;dxSkinVS2010RS17;cxTreeListdxBarPopupMenuRS17;dxThemeRS17;DBXSqliteDriver;dxPScxGridLnkRS17;fmx;IndySystem;dxSkinValentineRS17;vclib;DataSnapClient;dxSkinDevExpressStyleRS17;dxPSdxSpreadSheetLnkRS17;DataSnapProviderClient;DBXSybaseASEDriver;cxBarEditItemRS17;dxServerModeRS17;cxPivotGridOLAPRS17;cxSchedulerRS17;MetropolisUILiveTile;dxSkinPumpkinRS17;dxPSLnksRS17;dxPSdxDBOCLnkRS17;cxVerticalGridRS17;dxSkinSpringTimeRS17;vcldsnap;dxSkinDevExpressDarkStyleRS17;DBXDb2Driver;DBXOracleDriver;dxSkinLiquidSkyRS17;cxSpreadSheetRS17;fmxase;vcl;dxSkinOffice2007SilverRS17;IndyIPCommon;DBXMSSQLDriver;dxPSdxOCLnkRS17;dxSkinMetropolisDarkRS17;inetdbxpress;webdsnap;dxSkinCoffeeRS17;adortl;dxSkinscxSchedulerPainterRS17;dxtrmdRS17;dxPScxPCProdRS17;rtl;DbxClientDriver;dxTabbedMDIRS17;dxSkinSharpPlusRS17;dxComnRS17;dxSkinsCoreRS17;dxSkinLondonLiquidSkyRS17;dxdbtrRS17;dxSkinBlackRS17;dxorgcRS17;IndyProtocols;DBXMySQLDriver;dxLayoutControlRS17;bindcompdbx;dxSkinOffice2007BlueRS17;dxPScxPivotGridLnkRS17;dxSpellCheckerRS17;vcltouch;dxSkinOffice2007GreenRS17;dxSkinSharpRS17;websnap;dxSkinFoggyRS17;dxTileControlRS17;VclSmp;dxSkinDarkSideRS17;cxPivotGridRS17;DataSnapConnectors;fmxobj;cxTreeListRS17;dxSkinGlassOceansRS17;dxPSdxFCLnkRS17;dxFlowChartRS17;fmxdae;dxMapControlRS17;dxSkinsdxNavBarPainterRS17;dxDBXServerModeRS17;DataSnapIndy10ServerTransport;dxSkinCaramelRS17;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="UFrmImportWSDelta.pas">
+            <Form>FrmImportWSDelta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="z_ws_cent_pal1.pas"/>
+        <DCCReference Include="z_ws_ac_mat1.pas"/>
+        <DCCReference Include="UBD_Aux.pas"/>
+        <DCCReference Include="UThreads_WS.pas"/>
+        <DCCReference Include="UAux_Integracao.pas"/>
+        <DCCReference Include="USysLogs_local.pas"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">2070</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                    <VersionInfoKeys Name="CFBundleName"/>
+                    <VersionInfoKeys Name="CFBundleDisplayName"/>
+                    <VersionInfoKeys Name="CFBundleIdentifier"/>
+                    <VersionInfoKeys Name="CFBundleVersion"/>
+                    <VersionInfoKeys Name="CFBundlePackageType"/>
+                    <VersionInfoKeys Name="CFBundleSignature"/>
+                    <VersionInfoKeys Name="CFBundleAllowMixedLocalizations"/>
+                    <VersionInfoKeys Name="CFBundleExecutable"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">PrjAcceptSapDelta.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
+
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7001
+DeleteMapAfterCompile=1
+EurekaLog Last Line -->

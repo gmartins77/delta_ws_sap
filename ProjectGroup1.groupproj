@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CCA388F5-0243-491E-A9DE-C80972D420D3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="adi_delta_sap.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PckDeltaWsSap.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PrjAcceptSapDelta.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\gmart\OneDrive\Documentos\RAD Studio\Projects\testes\DELTA_SAP_FT\Project1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="adi_delta_sap">
+        <MSBuild Projects="adi_delta_sap.dproj"/>
+    </Target>
+    <Target Name="adi_delta_sap:Clean">
+        <MSBuild Projects="adi_delta_sap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="adi_delta_sap:Make">
+        <MSBuild Projects="adi_delta_sap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PckDeltaWsSap">
+        <MSBuild Projects="PckDeltaWsSap.dproj"/>
+    </Target>
+    <Target Name="PckDeltaWsSap:Clean">
+        <MSBuild Projects="PckDeltaWsSap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PckDeltaWsSap:Make">
+        <MSBuild Projects="PckDeltaWsSap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PrjAcceptSapDelta">
+        <MSBuild Projects="PrjAcceptSapDelta.dproj"/>
+    </Target>
+    <Target Name="PrjAcceptSapDelta:Clean">
+        <MSBuild Projects="PrjAcceptSapDelta.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PrjAcceptSapDelta:Make">
+        <MSBuild Projects="PrjAcceptSapDelta.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="C:\Users\gmart\OneDrive\Documentos\RAD Studio\Projects\testes\DELTA_SAP_FT\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="C:\Users\gmart\OneDrive\Documentos\RAD Studio\Projects\testes\DELTA_SAP_FT\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="C:\Users\gmart\OneDrive\Documentos\RAD Studio\Projects\testes\DELTA_SAP_FT\Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="adi_delta_sap;PckDeltaWsSap;PrjAcceptSapDelta;Project1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="adi_delta_sap:Clean;PckDeltaWsSap:Clean;PrjAcceptSapDelta:Clean;Project1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="adi_delta_sap:Make;PckDeltaWsSap:Make;PrjAcceptSapDelta:Make;Project1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
